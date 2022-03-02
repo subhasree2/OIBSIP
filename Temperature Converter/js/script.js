@@ -9,10 +9,12 @@ submit.onclick = ()=>{
 	let result;
 	if(x=='Celsius') {
 		result = tempvalue*1.8 + 32;
+		result = Math.round(result);
 		resulttag.innerHTML = 'Celsius to Fahrenheit : '+result+'°F';
 	}
 	else {
 		result = (tempvalue-32)*(0.55);
+		result = Math.round(result);
 		resulttag.innerHTML = 'Fahrenheit to Celsius : '+result+'°C';
 	}
 }
